@@ -1,14 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>spanish-pronouns-to-be</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7560d3">
+  <meta name="description" content="A little Spanish, a lot of fun. Practice Spanish subject pronouns and ser with bite-size games, listening, and speaking.">
+  <title>Hola Club — Spanish, one little win at a time</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <h1>spanish-pronouns-to-be</h1>
-  <p>Describe what you'd like to build in the Copilot terminal.</p>
-  <script src="app.js"></script>
+  <a class="skip-link" href="#main">Skip to learning</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5c-3-2-7-2-10-1v15c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Zm0 0v15"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-13h-8l1-7Z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24"><path d="M7 3h10v6a5 5 0 0 1-10 0V3Zm0 2H3v3a5 5 0 0 0 5 5m9-8h4v3a5 5 0 0 1-5 5m-4 1v6m-5 1h10"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5V4Zm5 4a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M13 2c1 6-5 6-3 11 2 0 4-2 4-4 9 9 3 14-2 13C2 22 1 13 6 8c0 3 1 4 2 4-1-5 3-6 5-10Z"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="13" rx="4"/><path d="M5 10v2a7 7 0 0 0 14 0v-2m-7 9v3m-4 0h8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="15" rx="3"/><path d="M6 3h12M9 11h6m-6 5h4"/></symbol>
+    <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14v-3a9 9 0 0 1 18 0v3"/><rect x="2" y="12" width="5" height="9" rx="2"/><rect x="17" y="12" width="5" height="9" rx="2"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="15" cy="17" r="3"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 3C8 2 1 8 5 16c8 5 15-1 15-13ZM4 21 16 9"/></symbol>
+    <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M6 9h1m4 0h1m4 0h1M6 13h1m4 0h1m4 0h1m-9 3h8"/></symbol>
+  </svg>
+
+  <aside class="sidebar">
+    <a class="brand" href="./" aria-label="Hola Club home"><span class="brand-mark" aria-hidden="true">h<span>•</span></span>hola<span class="brand-light">club</span><span class="brand-dot">.</span></a>
+    <span class="sidebar-label">YOUR LITTLE LANGUAGE ADVENTURE</span>
+    <nav class="main-nav" aria-label="Main navigation">
+      <button class="nav-item active" data-page="learn" aria-current="page"><svg class="icon"><use href="#i-book"/></svg>Let's learn<span class="nav-dot"></span></button>
+      <button class="nav-item" data-page="practice"><svg class="icon"><use href="#i-grid"/></svg>Practice playground</button>
+      <button class="nav-item" data-page="notes"><svg class="icon"><use href="#i-card"/></svg>My cheat sheet</button>
+      <button class="nav-item" data-page="progress"><svg class="icon"><use href="#i-cup"/></svg>My little wins</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="growth-art" aria-hidden="true"><span class="plant-leaf leaf-one"></span><span class="plant-leaf leaf-two"></span><span class="plant-stem"></span><span class="plant-pot"></span><span class="plant-spark">✧</span></div>
+      <strong>A little every day<br>goes a long way.</strong>
+      <p>Big things start with a hola.</p>
+      <div class="profile"><span class="avatar" aria-hidden="true">Y</span><div><strong>You’ve got this!</strong><span>Spanish explorer</span></div><span class="online-dot" aria-hidden="true"></span></div>
+    </div>
+  </aside>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="breadcrumb">Your learning space <span>/</span> <strong id="page-label">Let’s learn</strong></div>
+      <div class="topbar-actions">
+        <span class="stat-chip streak-chip" title="Consecutive days practiced"><svg class="icon"><use href="#i-flame"/></svg><strong id="header-streak">0</strong><span class="chip-label">day streak</span></span>
+        <span class="stat-chip xp-chip" title="Total experience points"><svg class="icon"><use href="#i-bolt"/></svg><strong id="header-xp">0</strong><span class="chip-label">XP</span></span>
+        <span class="toolbar-divider"></span>
+        <button class="icon-button" id="sound-toggle" aria-label="Sound effects" aria-pressed="true" title="Toggle sound effects"><svg class="icon"><use href="#i-sound"/></svg></button>
+        <button class="icon-button" id="settings-open" aria-label="Open audio settings" title="Audio settings"><svg class="icon"><use href="#i-settings"/></svg></button>
+      </div>
+    </header>
+
+    <main id="main" class="main-content" tabindex="-1">
+      <section id="learn-page" class="page" aria-labelledby="welcome-title">
+        <div class="page-heading"><div><p class="eyebrow">¡HOLA, EXPLORER! <span aria-hidden="true">☀</span></p><h1 id="welcome-title" tabindex="-1">Ready for a little <span lang="es">español?</span></h1><p>Small steps. New words. A whole lot of “I got this.”</p></div><span class="subject-badge"><span aria-hidden="true">🇪🇸</span> SPANISH BASICS</span></div>
+        <div class="dashboard-grid">
+          <div class="learning-column">
+            <section class="hero-card" aria-labelledby="hero-title">
+              <div class="hero-copy"><span class="lesson-pill"><span class="pill-dot"></span> UNIT 01 · THE ESSENTIALS</span><h2 id="hero-title">A little <em>ser.</em><br>A lot of possibility.</h2><p>I am. You are. We’re getting somewhere.<br>Meet Spanish pronouns and the verb <strong lang="es">ser</strong>.</p><button class="button button-purple" data-start="mix">Let’s do this <svg class="icon"><use href="#i-arrow"/></svg></button><span class="hero-meta">~5 minutes <span>·</span> 10 little challenges <span>·</span> +XP</span></div>
+              <div class="hero-illustration" aria-hidden="true">
+                <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="art-spark spark-one">✦</span><span class="art-spark spark-two">✧</span><span class="art-dot art-dot-one"></span><span class="art-dot art-dot-two"></span>
+                <span class="word-sticker sticker-yo">yo soy <span>✦</span></span>
+                <svg class="mascot" viewBox="0 0 250 260" fill="none"><ellipse cx="129" cy="234" rx="78" ry="12" fill="#b9a2df" opacity=".3"/><path d="M80 193 68 223Q67 234 82 229L101 211M151 209l15 21q13 9 17-3l-7-30" fill="#559f78" stroke="#326e52" stroke-width="3"/><path d="M51 119Q24 109 26 134q0 12 24 22m151-41q30-19 29 6-1 16-23 27" fill="#83cfa1" stroke="#326e52" stroke-width="3"/><path d="M58 62q0-30 27-27l39 10 43-12q29-7 32 28l12 111q4 47-49 47H96q-48 0-48-42Z" fill="#a5dfad" stroke="#326e52" stroke-width="3"/><path d="m76 48 46 12 49-13" stroke="#c7edbf" stroke-width="8" stroke-linecap="round"/><ellipse cx="91" cy="117" rx="7" ry="10" fill="#264936"/><ellipse cx="163" cy="117" rx="7" ry="10" fill="#264936"/><path d="M111 138q16 19 32-1" stroke="#264936" stroke-width="4" stroke-linecap="round"/><ellipse cx="75" cy="137" rx="13" ry="7" fill="#edae9b"/><ellipse cx="177" cy="137" rx="13" ry="7" fill="#edae9b"/><path d="m100 178 26 8 28-8" stroke="#64af80" stroke-width="3" stroke-linecap="round"/><path d="M111 47q-4-27 19-33 12 22-4 36" fill="#69af7c" stroke="#326e52" stroke-width="3"/></svg>
+                <span class="word-sticker sticker-tu">tú eres <span>♡</span></span><span class="mascot-caption">meet Pip, your study bud</span>
+              </div>
+            </section>
+
+            <section class="playground-preview" aria-labelledby="play-title">
+              <div class="section-heading"><div><h2 id="play-title">Your practice playground <span aria-hidden="true">✧</span></h2><p>Switch it up. Find your kind of fun.</p></div><button class="text-button" data-page="practice">See all <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+              <div class="activity-grid" id="home-activities"></div>
+            </section>
+
+            <section class="tip-strip"><span class="tip-icon" aria-hidden="true">✦</span><p><strong>A tiny tip, just for you</strong><span><span lang="es">Ser</span> means “to be.” Start with <span lang="es">yo soy</span> — that’s “I am.” Look at you, speaking Spanish!</span></p><button class="icon-button" data-say="Yo soy. Tú eres. Nosotros somos." aria-label="Listen to the Spanish tip"><svg class="icon"><use href="#i-sound"/></svg></button></section>
+          </div>
+
+          <aside class="right-column" aria-label="Learning goals and unit outline">
+            <section class="goal-card"><div class="section-heading"><h2>Your daily little win</h2><svg class="icon goal-star" aria-hidden="true"><use href="#i-star"/></svg></div><p>Make a little room for learning.</p><div class="goal-progress"><div class="goal-medal" aria-hidden="true"><svg class="icon"><use href="#i-bolt"/></svg></div><div><strong><span id="daily-xp">0</span> <span class="muted">/ 50 XP</span></strong><span id="goal-caption">Let’s get your day growing</span></div></div><progress id="daily-progress" max="50" value="0" aria-label="Daily XP goal"></progress><p class="goal-foot"><span aria-hidden="true">🌱</span> Five minutes is a great start.</p></section>
+            <section class="journey-card"><p class="eyebrow">YOUR FIRST CHAPTER</p><h2>Nice to meet <span lang="es">tú.</span></h2><p>The building blocks of being you.</p><ol class="journey-list"><li class="journey-current"><span class="journey-node"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></span><div><strong>Who’s who?</strong><span>Meet the pronouns</span></div><span class="tiny-label">START</span></li><li><span class="journey-node">2</span><div><strong>To be? ¡Ser!</strong><span>Soy, eres, es & friends</span></div></li><li><span class="journey-node">3</span><div><strong>Put it together</strong><span>Small words, real sentences</span></div></li><li><span class="journey-node"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></span><div><strong>Your “I did it!” moment</strong><span>Mix it up & shine</span></div></li></ol><span class="journey-note">All four topics in every mixed session</span></section>
+            <div class="kind-note"><span aria-hidden="true">♡</span><p>Mistakes welcome.<br>That’s how your brain grows.</p></div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="practice-page" class="page" hidden aria-labelledby="practice-title"><div class="page-heading"><div><p class="eyebrow">PICK YOUR PLAY</p><h1 id="practice-title" tabindex="-1">A fresh way to say <span lang="es">hola.</span></h1><p>Same little words. So many ways to make them stick.</p></div></div><div class="practice-banner"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg><div><h2>A little bit of everything</h2><p>Ten challenges. All four topics. One happy brain.</p></div><button class="button button-purple" data-start="mix">Surprise me <svg class="icon"><use href="#i-arrow"/></svg></button></div><div class="activity-grid full-activities" id="all-activities"></div></section>
+
+      <section id="notes-page" class="page" hidden aria-labelledby="notes-title"><div class="page-heading"><div><p class="eyebrow">YOUR POCKET-SIZED STUDY BUDDY</p><h1 id="notes-title" tabindex="-1">The “oh, right!” sheet.</h1><p>Everything from your worksheet, with a little breathing room.</p></div></div><div class="notes-layout"><section class="reference-card"><h2>Who’s who, and how to be</h2><p>Tap the speaker to hear each phrase.</p><div id="pronoun-reference" class="pronoun-reference"></div><p class="reference-note"><strong>Quick grammar:</strong> A noun names a person, place, thing, or idea. A pronoun replaces a noun. The subject is who or what a sentence is about. A verb expresses an action or a state of being.</p></section><section class="reference-card"><h2>When do we use <span lang="es">ser</span>?</h2><div id="uses-reference"></div><div class="note-callout"><strong>A little language context</strong><p><span lang="es">Vosotros/vosotras</span> is informal “you all” in most of Spain. <span lang="es">Ustedes</span> is “you all” across Latin America and formal in Spain.</p><p>You may see <span lang="es">elle, elles, nosotres,</span> and <span lang="es">vosotres</span> as inclusive forms. Usage varies; <span lang="es">elle</span> takes <span lang="es">es</span> and <span lang="es">elles</span> takes <span lang="es">son</span>.</p><p>Spanish usually leaves out a subject pronoun for “it.” Say <span lang="es">“Es un libro”</span> (It is a book). For people, “they” can be <span lang="es">ellos, ellas,</span> or inclusive <span lang="es">elles</span>.</p></div></section></div></section>
+
+      <section id="progress-page" class="page" hidden aria-labelledby="progress-title"><div class="page-heading"><div><p class="eyebrow">LOOK AT YOU GROW</p><h1 id="progress-title" tabindex="-1">Little wins. Real progress.</h1><p>Every attempt counts. Yes, even the wobbly ones.</p></div></div><div id="progress-content"></div></section>
+
+      <section id="lesson-page" class="page lesson-page" hidden aria-labelledby="lesson-title">
+        <div class="lesson-top"><button class="icon-button" id="exit-lesson" aria-label="Leave practice"><svg class="icon"><use href="#i-close"/></svg></button><progress id="lesson-progress" max="10" value="0" aria-label="Challenges completed"></progress><span id="lesson-count">1 / 10</span><span class="lesson-score"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg><span id="lesson-xp">0 XP</span></span></div>
+        <div class="lesson-card"><div class="exercise-meta"><span class="lesson-pill" id="exercise-kind">PICK THE MATCH</span><span id="combo" class="combo"></span></div><h1 id="lesson-title" tabindex="-1"></h1><p id="lesson-instruction" class="lesson-instruction"></p><div id="exercise"></div><div id="answer-feedback" class="answer-feedback" role="status" hidden></div><div class="lesson-actions"><button class="text-button" id="hint-button">Need a little hint?</button><button class="button button-purple" id="check-answer" disabled>Check answer <svg class="icon"><use href="#i-check"/></svg></button></div><p class="keyboard-hint">No rush. You’re here to learn, not to be perfect.</p></div>
+      </section>
+      <section id="result-page" class="page" hidden aria-labelledby="result-title"></section>
+      <p id="app-status" class="app-status" role="status"></p>
+      <div id="runtime-state" class="runtime-state" role="status" hidden></div>
+    </main>
+    <footer class="footer"><span>A little Spanish. A little confidence. <strong>A lot of you.</strong></span><span>MADE FOR CURIOUS MINDS <span aria-hidden="true">✦</span></span></footer>
+  </div>
+
+  <dialog id="settings-dialog" class="settings-dialog" aria-labelledby="settings-title"><div class="section-heading"><h2 id="settings-title">Make yourself comfortable</h2><button class="icon-button" id="settings-close" aria-label="Close settings"><svg class="icon"><use href="#i-close"/></svg></button></div><p>Your practice, your pace.</p><label class="setting-row" for="effects-setting"><span><strong>Happy little sound effects</strong><small>A chime for your little wins.</small></span><input id="effects-setting" type="checkbox" checked></label><label class="setting-row" for="auto-speak"><span><strong>Read answers aloud</strong><small>Hear the Spanish after you check.</small></span><input id="auto-speak" type="checkbox" checked></label><label class="select-label" for="speech-rate">Spanish speaking speed</label><select id="speech-rate"><option value="0.7">Nice and slow</option><option value="0.85" selected>A comfortable pace</option><option value="1">Natural speed</option></select><button class="button button-soft" id="test-voice"><svg class="icon"><use href="#i-sound"/></svg>Try the Spanish voice</button><p class="privacy-note">Progress stays in this browser on this device. Microphone practice is optional; your browser’s speech provider may process audio online. Use HTTPS on your phone to enable the microphone.</p><p id="settings-status" role="status"></p></dialog>
 </body>
 </html>
